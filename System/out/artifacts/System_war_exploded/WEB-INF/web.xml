@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    http://xmlns.jcp.org/xml/ns/j2ee
+    <!--指定首页-->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--员工登陆请求-->
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>servlet.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <!--获取验证码-->
+    <servlet>
+        <servlet-name>Code</servlet-name>
+        <servlet-class>utils.Code</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Code</servlet-name>
+        <url-pattern>/Code</url-pattern>
+    </servlet-mapping>
+
+    <!--员工修改密码-->
+    <servlet>
+        <servlet-name>EmploePasswordUpdate</servlet-name>
+        <servlet-class>servlet.EmploePasswordUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmploePasswordUpdate</servlet-name>
+        <url-pattern>/EmploePasswordUpdate</url-pattern>
+    </servlet-mapping>
+
+    <!--员工修改资料-->
+    <servlet>
+        <servlet-name>EmploeUpdateSelf</servlet-name>
+        <servlet-class>servlet.EmploeUpdateSelf</servlet-class>
+    </servlet>>
+    <servlet-mapping>
+        <servlet-name>EmploeUpdateSelf</servlet-name>
+        <url-pattern>/EmploeUpdateSelf</url-pattern>
+    </servlet-mapping>
+
+    <!--默认加载部门职位数据-->
+    <servlet>
+        <servlet-name>LoadDate</servlet-name>
+        <servlet-class>servlet.LoadDate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadDate</servlet-name>
+        <url-pattern>/LoadDate</url-pattern>
+    </servlet-mapping>
+
+    <!--找回密码-->
+    <servlet>
+        <servlet-name>FindPassword</servlet-name>
+        <servlet-class>servlet.FindPassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindPassword</servlet-name>
+        <url-pattern>/FindPassword</url-pattern>
+    </servlet-mapping>
+
+    <!--员工注册-->
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>servlet.Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+
+    <!--展示留言-->
+    <servlet>
+        <servlet-name>ShowNewsTable</servlet-name>
+        <servlet-class>servlet.ShowNewsTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowNewsTable</servlet-name>
+        <url-pattern>/ShowNewsTable</url-pattern>
+    </servlet-mapping>
+
+    <!--员工添加留言-->
+    <servlet>
+        <servlet-name>EmploeNewsAdd</servlet-name>
+        <servlet-class>servlet.EmploeNewsAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmploeNewsAdd</servlet-name>
+        <url-pattern>/EmploeNewsAdd</url-pattern>
+    </servlet-mapping>
+
+    <!--员工更改头像-->
+    <servlet>
+        <servlet-name>EmploeUpdatePhoto</servlet-name>
+        <servlet-class>servlet.EmploeUpdatePhoto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmploeUpdatePhoto</servlet-name>
+        <url-pattern>/EmploeUpdatePhoto</url-pattern>
+    </servlet-mapping>
+
+    <!--获取员工信息-->
+    <servlet>
+        <servlet-name>GetEmploe</servlet-name>
+        <servlet-class>servlet.GetEmploe</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetEmploe</servlet-name>
+        <url-pattern>/GetEmploe</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员登陆请求-->
+    <servlet>
+        <servlet-name>ManagerLogin</servlet-name>
+        <servlet-class>servlet.ManagerLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerLogin</servlet-name>
+        <url-pattern>/ManagerLogin</url-pattern>
+    </servlet-mapping>
+
+    <!--显示职员信息请求-->
+    <servlet>
+        <servlet-name>EmploeTable</servlet-name>
+        <servlet-class>servlet.EmploeTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmploeTable</servlet-name>
+        <url-pattern>/EmploeTable</url-pattern>
+    </servlet-mapping>
+    
+    <!--按条件搜索员工信息-->
+    <servlet>
+        <servlet-name>SearchEmploe</servlet-name>
+        <servlet-class>servlet.SearchEmploe</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchEmploe</servlet-name>
+        <url-pattern>/SearchEmploe</url-pattern>
+    </servlet-mapping>
+
+    <!--展示员工细节-->
+    <servlet>
+        <servlet-name>EmploeDetail</servlet-name>
+        <servlet-class>servlet.EmploeDetail</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmploeDetail</servlet-name>
+        <url-pattern>/EmploeDetail</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员修改员工资料请求-->
+    <servlet>
+        <servlet-name>ManagerShowSelf</servlet-name>
+        <servlet-class>servlet.ManagerShowSelf</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerShowSelf</servlet-name>
+        <url-pattern>/ManagerShowSelf</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员修改员工信息-->
+    <servlet>
+        <servlet-name>ManagerEmploeUpdate</servlet-name>
+        <servlet-class>servlet.ManagerEmploeUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerEmploeUpdate</servlet-name>
+        <url-pattern>/ManagerEmploeUpdate</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员添加员工信息-->
+    <servlet>
+        <servlet-name>ManagerEmploeTable_add</servlet-name>
+        <servlet-class>servlet.ManagerEmploeTable_add</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerEmploeTable_add</servlet-name>
+        <url-pattern>/ManagerEmploeTable_add</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员添加员工信息-->
+    <servlet>
+        <servlet-name>ManagerEmploeAdd</servlet-name>
+        <servlet-class>servlet.ManagerEmploeAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerEmploeAdd</servlet-name>
+        <url-pattern>/ManagerEmploeAdd</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员删除员工-->
+    <servlet>
+        <servlet-name>EmploeRemove</servlet-name>
+        <servlet-class>servlet.EmploeRemove</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmploeRemove</servlet-name>
+        <url-pattern>/EmploeRemove</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员修改管理员密码-->
+    <servlet>
+        <servlet-name>ManagerMpasswordUpdate</servlet-name>
+        <servlet-class>servlet.ManagerMpasswordUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerMpasswordUpdate</servlet-name>
+        <url-pattern>/ManagerMpasswordUpdate</url-pattern>
+    </servlet-mapping>
+    <!--管理员管理部门-->
+    <servlet>
+        <servlet-name>ManagerDeptTable</servlet-name>
+        <servlet-class>servlet.ManagerDeptTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerDeptTable</servlet-name>
+        <url-pattern>/ManagerDeptTable</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员添加部门-->
+    <servlet>
+        <servlet-name>ManagerDeptTable_add</servlet-name>
+        <servlet-class>servlet.ManagerDeptTable_add</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerDeptTable_add</servlet-name>
+        <url-pattern>/ManagerDeptTable_add</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员添加部门数据-->
+    <servlet>
+        <servlet-name>ManagerDeptAdd</servlet-name>
+        <servlet-class>servlet.ManagerDeptAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerDeptAdd</servlet-name>
+        <url-pattern>/ManagerDeptAdd</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员删除部门-->
+    <servlet>
+        <servlet-name>ManagerDeptDelete</servlet-name>
+        <servlet-class>servlet.ManagerDeptDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerDeptDelete</servlet-name>
+        <url-pattern>/ManagerDeptDelete</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员查看消息-->
+    <servlet>
+        <servlet-name>NewsTable</servlet-name>
+        <servlet-class>servlet.NewsTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewsTable</servlet-name>
+        <url-pattern>/NewsTable</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员删除消息-->
+    <servlet>
+        <servlet-name>ManagerDeleteNews</servlet-name>
+        <servlet-class>servlet.ManagerDeleteNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerDeleteNews</servlet-name>
+        <url-pattern>/ManagerDeleteNews</url-pattern>
+    </servlet-mapping>
+
+    <!--管理员发布消息-->
+    <servlet>
+        <servlet-name>ManagerNewsAdd</servlet-name>
+        <servlet-class>servlet.EmploeNewsAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerNewsAdd</servlet-name>
+        <url-pattern>/ManagerNewsAdd</url-pattern>
+    </servlet-mapping>
+
+</web-app>
